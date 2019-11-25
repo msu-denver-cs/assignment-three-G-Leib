@@ -10,7 +10,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-left">
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
       <div class="container">
       <a class="navbar-brand" href="/">Car Parts</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavBar">
@@ -22,7 +22,7 @@
           <li class="nav-item"><a class="nav-link" href="/parts">Parts</a></li>
           <li class="nav-item"><a class="nav-link" href="/makes">Makes</a></li>
         </ul>
-        <p class="navbar-text float-right">
+        <div class="navbar-text float-right ml-auto">
           <% if user_signed_in? %>
             Logged in as <strong><%= current_user.email %></strong>.
             <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
@@ -31,10 +31,11 @@
             <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
             <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
           <% end %>
-        </p>
+        </div>
       </div>
       </div>
     </nav>
+    <div class="buffer"></div>
     <% if notice %>
       <p class="alert aerlt-success"><%= notice %></p>
     <% end %>

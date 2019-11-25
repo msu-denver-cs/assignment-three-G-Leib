@@ -11003,3 +11003,755 @@ Processing by CarsController#index as HTML
 Completed 200 OK in 212ms (Views: 206.1ms | ActiveRecord: 3.9ms)
 
 
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:36:41 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.8ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.7ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (82.6ms)
+Completed 200 OK in 528ms (Views: 504.1ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:38:18 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 203ms (Views: 196.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:38:25 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 184ms (Views: 179.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:39:18 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 235ms (Views: 230.7ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-11-24 18:39:23 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"KDb0eKWdUiZkD2nMLLflkfLxABpgGEj1MIg3tvtO+11dx9n7itrfkNXRAUZeNozkzlQhiii8E98J4LX2QvXfNw=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-24 18:39:23 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.4ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:39:26 -0700
+Processing by CarsController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-11-24 18:39:26 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.0ms)
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 199ms (Views: 196.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-11-24 18:39:31 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.7ms)
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 162ms (Views: 160.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-11-24 18:39:36 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mvVWe0+jry8jiqJGEhyeGfMEtZXrCuUlJD29uMuA17eHwDbuHwLzDMJVwwB0A+Om+gRiLNGwCAnga77n5TZFUw==", "user"=>{"email"=>"blahblah@blah.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "blahblah@blah.com"], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 141ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:39:36 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 220ms (Views: 216.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:40:14 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.3ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 192ms (Views: 187.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:40:42 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 242ms (Views: 234.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:40:56 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 189ms (Views: 183.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:41:06 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.3ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.2ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 236ms (Views: 229.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:41:26 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 182ms (Views: 177.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:41:59 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 224ms (Views: 219.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:44:39 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.1ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 196ms (Views: 190.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:45:49 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 238ms (Views: 233.3ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-11-24 18:46:24 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VqhbfTg7QGJOffMsOmkzbivYgL7NKd3IpzlV1i7srHvKtfPENFw8gMp21jocbsMihtc1vePOabaAAPh9tPf8JA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-11-24 18:46:24 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/railties-5.2.3/lib/rails/templates/rails/welcome/index.html.erb (1.6ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:46:27 -0700
+Processing by CarsController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-11-24 18:46:27 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (0.9ms)
+  Rendered /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 167ms (Views: 165.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-11-24 18:46:51 -0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rQFgvOI8+EThM6PsBSnWptmF/Ao2JiQgl36G2nh/XPz/YWdeUSK1btotPMtPE2mI1Yn6pWGbob6heZc7A/Gdtg==", "user"=>{"email"=>"blahblah@blah.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "blahblah@blah.com"], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/cars
+Completed 302 Found in 136ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/cars" for 127.0.0.1 at 2019-11-24 18:46:51 -0700
+Processing by CarsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/gil/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+  Rendering cars/index.html.erb within layouts/application
+  [1m[36mCar Load (0.2ms)[0m  [1m[34mSELECT "cars".* FROM "cars"[0m
+  ↳ app/views/cars/index.html.erb:24
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 1]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 2]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mMake Load (0.1ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 3]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 4]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 5]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 6]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.2ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 7]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 8]]
+  ↳ app/views/cars/index.html.erb:29
+  [1m[36mCACHE Make Load (0.0ms)[0m  [1m[34mSELECT  "makes".* FROM "makes" WHERE "makes"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/cars/index.html.erb:28
+  [1m[36mPart Load (0.1ms)[0m  [1m[34mSELECT "parts".* FROM "parts" INNER JOIN "cars_parts" ON "parts"."id" = "cars_parts"."part_id" WHERE "cars_parts"."car_id" = ?[0m  [["car_id", 9]]
+  ↳ app/views/cars/index.html.erb:29
+  Rendered cars/index.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 187ms (Views: 182.8ms | ActiveRecord: 1.8ms)
+
+
