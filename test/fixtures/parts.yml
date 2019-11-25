@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  quantity: 1
+
+noname:
+  quantity: 1
+
+stringcount:
+  name: MyString
+  quantity: 1a
+
+nocount:
+  name: MyString
+
+negcount:
+  name: MyString
+  quantity: -1
+
+floatcount:
+  name: MyString
+  quantity: 1.1

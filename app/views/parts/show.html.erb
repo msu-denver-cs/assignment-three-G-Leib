@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @part.name %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @part.quantity %>
+</p>
+
+<p><strong>Cars used in:</strong></p>
+<ul>
+  <% @part.cars.each do |car| %>
+    <li><%= car.make.name %> <%= car.name %></li>
+  <% end %>
+</ul>
+
+<%= link_to 'Edit', edit_part_path(@part) %> |
+<%= link_to 'Back', parts_path %>
