@@ -4,12 +4,45 @@
     <title>AssignmentOneGLeib</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark justify-content-left">
+      <div class="container">
+      <a class="navbar-brand" href="/">Car Parts</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavBar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavBar">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/cars">Cars</a></li>
+          <li class="nav-item"><a class="nav-link" href="/parts">Parts</a></li>
+          <li class="nav-item"><a class="nav-link" href="/makes">Makes</a></li>
+        </ul>
+        <p class="navbar-text float-right">
+          <% if user_signed_in? %>
+            Logged in as <strong><%= current_user.email %></strong>.
+            <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+          <% else %>
+            <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+            <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+          <% end %>
+        </p>
+      </div>
+      </div>
+    </nav>
+    <% if notice %>
+      <p class="alert aerlt-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :parts do
     get :autocomplete_part_name, on: :collection
     collection do
