@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :static_pages
+  root to: 'static_pages#home'
   devise_for :users
   resources :parts do
     get :autocomplete_part_name, on: :collection
